@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CATS!!!</title>
+  </head>
+  <h1> Our Cats </h1>
+  <body>
+<% @cats.each do |cat| %>
+<table>
+  <tr>
+    <td><%= cat.name %></td>
+  </tr>
+  <tr>
+    <td><%= cat.birth_date %></td>
+  </tr>
+  <tr>
+    <td><%= cat.color %></td>
+  </tr>
+  <tr>
+    <td><%= cat.sex %></td>
+  </tr>
+  <tr>
+    <td><%= cat.description %></td>
+  </tr>
+</table>
+  </body>
+</html>

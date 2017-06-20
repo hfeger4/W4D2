@@ -1,0 +1,29 @@
+<% _action = cat.id ? cat_url(cat) : cats_url %>
+<% _verb = cat.id ? "PATCH" : "POST" %>
+
+<form action= "<%= _action %>" method="cat">
+  <input type="hidden" name="_method" value="<%= _verb %>">
+    <label>
+      <strong>Name:</strong>
+      <input id="name" type="text" name="cat[name]" value="<%= cat.name %>"
+    </label>
+
+    <label>
+      <strong>Birth Date:</strong>
+      <input id="birth_date" type="text" name="cat[birth_date]" value="<%= cat.birth_date %>"
+    </label>
+
+    <label>
+      <strong>Color:</strong>
+      <input id="color" type="text" name="cat[color]" value="<%= cat.color %>"
+    </label>
+
+    <label>
+      <strong>Sex:</strong>
+      <input id="sex" type="text" name="cat[sex]" value="<%= cat.sex %>"
+    </label>
+
+    <label>
+      <strong>Description:</strong>
+      <input id="description" type="text" name="cat[description]" value="<%= cat.description %>"
+    </label>
