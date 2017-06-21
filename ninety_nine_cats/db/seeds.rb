@@ -7,3 +7,4 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 cat1 = Cat.create(name: 'Angry Cat', birth_date: 3.days.ago, color: "orange", sex: 'M', description: 'A Trump like angry cat with small paws' )
+rental1 = CatRentalRequest.create(cat_id: cat1.id, start_date: 3.days.ago, end_date: 2.days.ago)

@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>CATS!!!</title>
-  </head>
-  <h1> Our Cats </h1>
-  <body>
+
 <% cat = @cat %>
 <table>
   <tr>
@@ -24,5 +17,13 @@
     <td><%= cat.description %></td>
   </tr>
 </table>
-  </body>
-</html>
+RentalRequests
+<table>
+  <% @cat_requests.each do |request| %>
+    <tr>
+      <td> <%= request.start_date %></td>
+      <td> <%= request.end_date %></td>
+      <td><%= request.status %></td>
+    </tr>
+    <% end %>
+</table>

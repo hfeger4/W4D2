@@ -21,6 +21,7 @@ class CatsController < ApplicationController
 
   def show
     @cat = selected_cat
+    @cat_requests = cat_requests
 
     if @cat
       render :show
@@ -52,6 +53,10 @@ class CatsController < ApplicationController
 
   def selected_cat
     Cat.find_by(id: params[:id])
+  end
+
+  def cat_requests
+    CatRentalRequest.where(cat_id: params[:id])
   end
 
 end
